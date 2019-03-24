@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <link rel="stylesheet" href="style/mysheet.css">
@@ -18,16 +19,17 @@
 
 <form id=game style="display:none;">
     <p id='question'></p>
-    <input type="text" id="reponse"><br>
+    <input type="text" id="reponse" onfocus="this.value=''"><br>
     <h1>
     <input class='ok' type="button" value="C'est mon dernier mot" onclick="afficherReponse()"><br></h1>
-    <p></p>
-    <p></p>
 
-    <p></p>
     <p></p>
 
 </form>
+
+<h1 id="gameover" style="display:none;">GAME OVER</h1>
+
+<span id="countdown" style="display:none;"><span> secondes!
 
 
 <script src="scripts/myjs.js"> </script>

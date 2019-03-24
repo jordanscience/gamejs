@@ -8,6 +8,9 @@ p {
     color: red;
   }
 
+img {
+    max-width:80%;
+}
   
 input 
     {background-color: #4CAF50;
