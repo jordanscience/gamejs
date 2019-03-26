@@ -4,7 +4,7 @@ var numberB = 0
 const timeout = 5000
 var score = 0
 var gameoverTime = null
-var numberOfQuestion = 5
+const secondsGame = 30
 
 // Image 
 document.getElementById("myBtn").addEventListener("click", function()
@@ -17,20 +17,23 @@ document.getElementById("myBtn").addEventListener("click", function()
 // Question
 
 document.getElementById('play').addEventListener("click", function () {
+        score = 0;
+        undisplayTimesout();
+        document.getElementById('game').style.display='block';
+        displayCountdown(secondsGame);
+        askQuestion()
+        setTimeout(displayTimesOut, secondsGame*1000);
+        document.getElementById('score').innerText = "Score: " + score.toString()
+        changeTextButton(); 
 
-    document.getElementById('gameover').style.display='none';
-    document.getElementById('game').style.display='block';
-    numberA = generateNumber(2, 10);
-    numberB = generateNumber(2, 10);
-    console.log("numberA: " + numberA);
-    console.log("numberB: " + numberB);
-    console.log(numberA * numberB);
-    document.getElementById('question').innerText = 'Question: ' + numberA.toString() + '*' + numberB.toString();
-    console.log("play button clicked !");
-    displayCountdown(5)
-    gameoverTime = window.setTimeout(displayGameOver, timeout)
 });
 
+function askQuestion()
+{
+    numberA = generateNumber(2, 10);
+    numberB = generateNumber(2, 10);
+    document.getElementById('question').innerText = 'Question: ' + numberA.toString() + '*' + numberB.toString();
+}
 
 
 
@@ -41,47 +44,41 @@ function generateNumber(borneInf, borneSup) {
     return number
 }
 
-function afficherReponse() {
+function updateScoreHtml(score)
+{
+    document.getElementById('score').innerText = "Score: " + score.toString()
+}
+
+function checkAnswer() {
     let reponse = document.getElementById("reponse").value;
-    console.log("Number to check " + (numberA * numberB).toString());
-    clearTimeout(gameoverTime);
-    console.log(gameoverTime);
     if (reponse == numberA * numberB)
     {
-        alert("Bravo !")
         score += 10
     }
     else{
-        alert('Essaye encore !')
         score -=5
     }
+    updateScoreHtml(score)
     console.log('Reponse ' + reponse);
-    changeTextButton(); 
+    askQuestion();
     
 }
 
 function changeTextButton () 
 {
     document.getElementById('play').innerText = "Rejouer"
-    
-    numberA = generateNumber(2, 10);
-    numberB = generateNumber(2, 10);
-    console.log("numberA: " + numberA);
-    console.log("numberB: " + numberB);
-    console.log(numberA * numberB);
-    document.getElementById('question').innerText = 'Question: ' + numberA.toString() + '*' + numberB.toString();
-
 }
 
-function displayGameOver () 
+function displayTimesOut () 
 {
-    document.getElementById('gameover').style.display='block';
+    document.getElementById('timesout').style.display='block';
     document.getElementById('game').style.display='none';
 }
 
 function displayCountdown(seconds)
 
-{   document.getElementById('countdown').style.display='block'
+{   
+document.getElementById('countdown').style.display='block'
 document.getElementById("countdown").textContent = seconds + ' secondes'
 var countdown = setInterval(function() {
     seconds--;
@@ -92,3 +89,10 @@ var countdown = setInterval(function() {
             document.getElementById("countdown").textContent = '';
         };
 }, 1000);}
+
+function undisplayTimesout()
+{
+    document.getElementById('timesout').style.display='none';
+
+}
+

@@ -6,10 +6,17 @@
 <link rel="stylesheet" href="style/mysheet.css">
 
 <h1 class="title">Ceci est le nouveau site de Rachel, la reine des maths...</h1>
-<p><br />Plein d'exercices sont en route !</p>
+<p class="regle"><br />Regle du jeu : <br />
+    <br />
 
+Le jeu dure 30 secondes. <br />
+<br />
+Bonne réponse --> 10 points<br />
+Mauvaise réponse --> - 5 points<br />
+<br />
+Bonne chance !</p>
 <p><button type="button" id='myBtn'>Appuie ici pour une surprise</button>
-<img id="bigpic" src="images/fun.png" style="display:none;"/></p>
+<img id="bigpic" src="images/fun.jpeg" style="display:none;"/></p>
 
 
 
@@ -21,13 +28,16 @@
     <p id='question'></p>
     <input type="text" id="reponse" onfocus="this.value=''"><br>
     <h1>
-    <input class='ok' type="button" value="C'est mon dernier mot" onclick="afficherReponse()"><br></h1>
+    <input class='ok' type="button" value="C'est mon dernier mot" id='submit' onclick="checkAnswer()"><br></h1>
 
     <p></p>
 
 </form>
 
-<h1 id="gameover" style="display:none;">GAME OVER</h1>
+<h1 id="timesout" style="display:none;">Temps écoulé</h1>
+
+<h1 id="score"></h1>
+
 
 <span id="countdown" style="display:none;"><span> secondes!
 

@@ -4,8 +4,10 @@ body {
 h1.title {
     color: blue;
 }
-p {
-    color: red;
+
+p.regle {
+    font-weight: bold;
+    font-size: 18px;
   }
 
 img {
@@ -16,3 +18,15 @@ input
     {background-color: #4CAF50;
     font-size: 16px;
     } 
+
+#countdown
+
+{
+    font-size: 26px;
+}
+
+#question
+
+{
+    font-size: 20px;
+}
