@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <link rel="stylesheet" href="style/mysheet.css">
 
@@ -15,6 +15,8 @@ Bonne réponse --> 10 points<br />
 Mauvaise réponse --> - 5 points<br />
 <br />
 Bonne chance !</p>
+<div id="mytable"></div>
+
 <p><button type="button" id='myBtn'>Appuie ici pour une surprise</button>
 <img id="bigpic" src="images/fun.jpeg" style="display:none;"/></p>
 
@@ -43,3 +45,5 @@ Bonne chance !</p>
 
 
 <script src="scripts/myjs.js"> </script>
+<script src="scripts/connect.js"> </script>
+

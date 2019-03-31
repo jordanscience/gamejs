@@ -3,6 +3,7 @@ var numberA = 0;
 var numberB = 0
 const timeout = 5000
 var score = 0
+var playerName = 'Tuni'
 var gameoverTime = null
 const secondsGame = 30
 
@@ -18,15 +19,24 @@ document.getElementById("myBtn").addEventListener("click", function()
 
 document.getElementById('play').addEventListener("click", function () {
         score = 0;
+        $("#comment").text = ''
+        playerName = prompt("Entre ton nom:", "Tuni");
         undisplayTimesout();
         document.getElementById('game').style.display='block';
         displayCountdown(secondsGame);
         askQuestion()
-        setTimeout(displayTimesOut, secondsGame*1000);
-        document.getElementById('score').innerText = "Score: " + score.toString()
+        setTimeout(displayTimesOutAndSaveScore, secondsGame*1000);
+        document.getElementById('score').innerText = "Score: " + score.toString();
         changeTextButton(); 
 
 });
+
+function saveScore(name, score)
+
+{
+    console.log("savescore.php?name=" + name + "&score=" + score);
+    $.get("savescore.php?name=" + name + "&score=" + score);
+}
 
 function askQuestion()
 {
@@ -69,10 +79,15 @@ function changeTextButton ()
     document.getElementById('play').innerText = "Rejouer"
 }
 
-function displayTimesOut () 
+function displayTimesOutAndSaveScore () 
 {
     document.getElementById('timesout').style.display='block';
     document.getElementById('game').style.display='none';
+    saveScore(playerName, score.toString());
+    if (score <=0)
+    {
+    $("#comment").text("Lahchouma, c'est quoi ce score? Il ne sera pas sauvegardé");
+}
 }
 
 function displayCountdown(seconds)
@@ -96,3 +111,5 @@ function undisplayTimesout()
 
 }
 
+
+// Display table score
