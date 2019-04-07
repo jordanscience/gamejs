@@ -5,6 +5,13 @@
 
 <link rel="stylesheet" href="style/mysheet.css">
 <body>
+
+<audio controls autoplay id='audio'>
+<source src="music/starwars.ogg" type="audio/ogg">
+<source src="music/starwars.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <h1 class="title">Ceci est le nouveau site de Rachel, la reine des maths...</h1>
 <p class="regle"><br />Regle du jeu : <br />
     <br />
