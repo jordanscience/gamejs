@@ -20,7 +20,11 @@ document.getElementById("myBtn").addEventListener("click", function()
 document.getElementById('play').addEventListener("click", function () {
         score = 0;
         $("#comment").text = ''
-        playerName = prompt("Entre ton nom:", "Tuni");
+        if (playerName == 'Tuni')
+        {
+            playerName = prompt("Entre ton nom:", "Tuni");
+        }
+        
         undisplayTimesout();
         document.getElementById('game').style.display='block';
         displayCountdown(secondsGame);
