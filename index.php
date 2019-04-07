@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style/mysheet.css">
-
+<body>
 <h1 class="title">Ceci est le nouveau site de Rachel, la reine des maths...</h1>
 <p class="regle"><br />Regle du jeu : <br />
     <br />
@@ -17,20 +17,20 @@ Mauvaise réponse --> - 5 points<br />
 Bonne chance !</p>
 <div id="mytable"></div>
 
-<p><button type="button" id='myBtn'>Appuie ici pour une surprise</button>
+<p><button type="button" id='myBtn' class='button'>Appuie ici pour une surprise</button>
 <img id="bigpic" src="images/fun.jpeg" style="display:none;"/></p>
 
 
 
-<p><button type="button" id='play'>Lancer le jeu !</button></p>
+<p><button type="button" id='play' class='button1'>Lancer le jeu !</button></p>
 
 <p id='notavailable'></p>
 
 <form id=game style="display:none;" onsubmit="return false">
     <p id='question'></p>
-    <input type="text" id="reponse" onfocus="this.value=''"><br>
+    <input type="text" id="reponse" onfocus="this.value=''" autocomplete="off"><br>
     <h1>
-    <input class='ok' type="button" value="C'est mon dernier mot" id='submit' onclick="checkAnswer()"><br></h1>
+    <input class='button' type="button" value="C'est mon dernier mot" id='submit' onclick="checkAnswer()"><br></h1>
 
     <p></p>
 
@@ -46,4 +46,4 @@ Bonne chance !</p>
 
 <script src="scripts/myjs.js"> </script>
 <script src="scripts/connect.js"> </script>
-
+</body>

@@ -27,26 +27,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-// $check_sql = "SELECT * FROM score WHERE (name = '$playerName' and score > '$score')"
-
-// $result = $conn->query($check_sql);
-// if ($result->num_rows > 0) {
-//     echo "We don't save anything";
-// }
-// else
-//     {"UPDATE score SET score = '$score'
-//         WHERE name = '$playerName"}
-// echo "</table>";
-
-
-
-
-
+// Here we update the latest score
+$check_sql = "UPDATE score SET score = '$score' WHERE (name = '$playerName' AND score<'$score')";
+$conn->query($check_sql);
 
 $sql = "INSERT INTO score (name, score) 
 SELECT * FROM (SELECT '$playerName', '$score') AS tmp
 WHERE NOT EXISTS (
-    SELECT name FROM score WHERE (name = '$playerName' and score > '$score')
+    SELECT name FROM score WHERE (name = '$playerName' and score >= '$score')
 ) LIMIT 1;";
 
 if ($conn->query($sql) === TRUE) {
