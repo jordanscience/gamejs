@@ -70,8 +70,9 @@ function checkAnswer() {
     }
     updateScoreHtml(score)
     console.log('Reponse ' + reponse);
+    $('#game')[0].reset(); // We remove the input value
     askQuestion();
-    
+    return false
 }
 
 function changeTextButton () 
@@ -111,5 +112,15 @@ function undisplayTimesout()
 
 }
 
+$("#game").bind('keyup', function(event){ 
+    console.log("event.keyCode: " + event.keyCode)
+    if(event.keyCode == 13){ 
+      event.preventDefault();
+      event.stopPropagation();
+      $("#submit").click(); 
+      return false
+    }
 
+
+  });
 // Display table score

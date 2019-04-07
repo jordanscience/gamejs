@@ -26,7 +26,7 @@ Bonne chance !</p>
 
 <p id='notavailable'></p>
 
-<form id=game style="display:none;">
+<form id=game style="display:none;" onsubmit="return false">
     <p id='question'></p>
     <input type="text" id="reponse" onfocus="this.value=''"><br>
     <h1>
