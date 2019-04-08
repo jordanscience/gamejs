@@ -89,4 +89,5 @@ th {
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-color: #cccccc;
+    background-position: center
   }

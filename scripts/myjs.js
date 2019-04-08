@@ -38,8 +38,8 @@ document.getElementById('play').addEventListener("click", function () {
 function saveScore(name, score)
 
 {
-    console.log("savescore.php?name=" + name + "&score=" + score);
-    $.get("savescore.php?name=" + name + "&score=" + score);
+    console.log("savescore_hidden.php?name=" + name + "&score=" + score);
+    $.get("savescore_hidden.php?name=" + name + "&score=" + score);
 }
 
 function askQuestion()
