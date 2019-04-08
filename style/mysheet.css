@@ -89,5 +89,6 @@ th {
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-color: #cccccc;
-    background-position: center
+    background-position: center;
+    height: 100vh;
   }
