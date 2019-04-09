@@ -11,8 +11,12 @@
 <source src="music/starwars.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+<div id="mytable"></div>
 
-<h1 class="title">Ceci est le nouveau site de Rachel, la reine des maths...</h1>
+<h1 class="title">Ceci est le nouveau site de Rachel, <br>
+  la reine des maths...</h1>
+
+
 <p class="regle"><br />Regle du jeu : <br />
     <br />
 
@@ -22,7 +26,6 @@ Bonne réponse --> 10 points<br />
 Mauvaise réponse --> - 5 points<br />
 <br />
 Bonne chance !</p>
-<div id="mytable"></div>
 
 <p><button type="button" id='myBtn' class='button'>Appuie ici pour une surprise</button>
 <img id="bigpic" src="images/fun.jpeg" style="display:none;"/></p>
@@ -35,7 +38,7 @@ Bonne chance !</p>
 
 <form id=game style="display:none;" onsubmit="return false">
     <p id='question'></p>
-    <input type="text" id="reponse" onfocus="this.value=''" autocomplete="off"><br>
+    <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" id="reponse" onfocus="this.value=''" autocomplete="off"><br>
     <h1>
     <input class='button' type="button" value="C'est mon dernier mot" id='submit' onclick="checkAnswer()"><br></h1>
 

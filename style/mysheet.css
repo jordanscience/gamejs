@@ -1,94 +1,95 @@
 body {
-    background-color: powderblue;
+  background-color: powderblue;
 }
 h1.title {
-    color: #dc15ae;
+  color: #dc15ae;
+  font-size:26px
 }
 
 p.regle {
-    font-weight: bold;
-    font-size: 18px;
-  }
+  font-weight: bold;
+  font-size: 18px;
+}
 
 img {
-    max-width:80%;
+  max-width:80%;
 }
-  
+
 input 
-    {background-color: #4CAF50;
-    font-size: 16px;
-    } 
+  {background-color: #4CAF50;
+  font-size: 16px;
+  } 
 
 audio
 {
-    left: 400px;
+  left: 400px;
 }
 #countdown
 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #d61b25a1;
+  font-size: 30px;
+  font-weight: bold;
+  color: #d61b25a1;
 }
 
 #question
 
 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 #mytable {
-    position: relative;
-    left: 300px;
-    width: 20px;
-    height: 10px;
-  } 
+  position: relative;
+  left: 400px;
+  width: 200px;
+  height: 10px;
+} 
 
 th {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 .button1 {
-    background-color: rgb(202, 56, 63); /* Red */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+  background-color: rgb(202, 56, 63); /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
-  input[type=button]{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+input[type=button]{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-  input[type=text]:focus {
-    border: 3px solid #555;
-  }
+input[type=text]:focus {
+  border: 3px solid #555;
+}
 
-  body {
-    background-image: url("https://wallpaperaccess.com/full/317880.jpg");
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-color: #cccccc;
-    background-position: center;
-    height: 100vh;
-  }
+body {
+  background-image: url("https://wallpaperaccess.com/full/317880.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-color: #cccccc;
+  background-position: center;
+  height: 100vh;
+}
