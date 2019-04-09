@@ -29,7 +29,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM score ORDER BY score DESC LIMIT 15;";
+$sql = "SELECT * FROM score ORDER BY score DESC LIMIT 20;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "<table>
