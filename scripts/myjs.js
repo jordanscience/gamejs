@@ -1,4 +1,4 @@
-alert("Bienvenue sur le site de Rachel")
+// alert("Bienvenue sur le site de Rachel")
 var numberA = 0;
 var numberB = 0
 const timeout = 5000
@@ -10,8 +10,17 @@ const secondsGame = 30
 // Image 
 document.getElementById("myBtn").addEventListener("click", function()
 {
-    document.getElementById('bigpic').style.display='block';
-    console.log("button clicked !")
+
+    var bigPicElement = document.getElementById('bigpic');
+    if (bigPicElement.style.display === 'none') {
+        bigPicElement.style.display = 'block';
+    } else {
+        bigPicElement.style.display = 'none';
+    }
+    // console.log("button clicked !");
+
+    // document.getElementById('bigpic').style.display='block';
+    // console.log("button clicked !")
 
 });
 
@@ -32,6 +41,7 @@ document.getElementById('play').addEventListener("click", function () {
         setTimeout(displayTimesOutAndSaveScore, secondsGame*1000);
         document.getElementById('score').innerText = "Score: " + score.toString();
         changeTextButton(); 
+        document.getElementById('reponse').focus(); // so the button is already clicked and ready for typing
 
 });
 

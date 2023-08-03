@@ -16,9 +16,9 @@ if ($score <= 0) {
 else
 {
 $servername = "localhost";
-$username = "id9042628_jordan";
+$username = "root";
 $password = "rachel";
-$dbname = "id9042628_score";
+$dbname = "general_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

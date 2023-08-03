@@ -18,9 +18,9 @@ th {text-align: left;}
 <body>
 <?php
 $servername = "localhost";
-$username = "id9042628_jordan";
+$username = "root";
 $password = "rachel";
-$dbname = "id9042628_score";
+$dbname = "general_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM score ORDER BY score DESC LIMIT 20;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-    echo "<table>
+    echo "<table class='score-table'>
     <tr>
     <th>Nom</th>
     <th>Score</th>
